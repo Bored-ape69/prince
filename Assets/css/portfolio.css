@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Poppins:wght@300&family=Roboto:wght@300&family=Syne+Tactile&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
+.heading {
+  color: white;
+  text-align: center;
+  font-family: poppins, "Courier New", Courier, monospace;
+}
+.heading h1:hover {
+  background: -webkit-linear-gradient(
+    rgb(228, 54, 83),
+    rgb(37, 37, 216),
+    rgb(52, 241, 4)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heading p {
+  display: none;
+}
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+
+.mamaearth,
+.honey,
+.icoder,
+.movie-ticket {
+  text-align: center;
+}
+
+.mamaearth img,
+.honey img,
+.icoder img,
+.movie-ticket img {
+  height: 45vh;
+  width: 50vh;
+  border: 1px solid gray;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-family: poppins;
+}
+
+.mockup {
+  position: relative;
+}
+
+.mockup__img {
+  display: block;
+  width: 100%;
+}
+
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+/* .image__overlay--primary {
+    background: #009578;
+} */
+
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+/* RESPONSIVE  Mobiles*/
+@media (max-width: 480px) {
+  .heading p {
+    display: block;
+  }
+  .heading p img {
+    height: 1.5rem;
+    display: inline;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .honey,
+  .icoder,
+  .movie-ticket {
+    margin-top: 1.8rem;
+  }
+  .movie-ticket {
+    margin-bottom: 2rem;
+  }
+  .mockup img {
+    width: 90%;
+    height: 60%;
+  }
+}
+
+/* RESPONSIVE IPAD */
+@media (min-device-width: 500px) and (max-device-width: 1024px) {
+  .heading p {
+    display: block;
+  }
+
+  .heading p img {
+    height: 1.5rem;
+    display: inline;
+  }
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .mockup img {
+    width: 95%;
+    height: 50%;
+  }
+  .mamaearth,
+  .honey,
+  .icoder,
+  .movie-ticket {
+    margin-bottom: 1rem;
+  }
+}

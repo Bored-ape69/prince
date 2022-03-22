@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+.image img {
+  height: 38rem;
+  width: 28rem;
+  border-radius: 1rem;
+}
+.container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.content {
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.5rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio button,
+.contact-me button {
+  border: none;
+  font-size: 2rem;
+  height: 3rem;
+  width: 12rem;
+  /* border-radius: 20px; */
+  border: 2.5px solid #00F8E0;
+  color: #00F8E0;
+}
+.contact-me button:hover {
+  width: 14rem;
+  transition: 0.5s;
+}
+.portfolio button:hover {
+  width: 14rem;
+  transition: 0.5s;
+}
+.social-media {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.instagram img {
+  height: 2rem;
+  width: 2rem;
+  padding: 2rem;
+}
+.behance img {
+  height: 2rem;
+  width: 3rem;
+  padding: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    margin: 0rem;
+    padding: 0rem;
+    font-size: medium;
+    
+  }
+  .buttons {
+    margin-bottom: 0rem;
+  }
+  .social-media {
+    margin-top: 0rem;
+  }
+  .image img {
+    display: none;
+  }
+  .portfolio button,
+  .contact-me button {
+    border: none;
+    font-size: 1.5rem;
+    height: 2.8rem;
+    width: 9rem;
+    border: 2.5px solid #00F8E0;
+  }
+}
+
+/* RESPONSIVE  iPad*/
+
+@media (min-device-width: 500px) and (max-device-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    margin: 0rem;
+    padding: 0rem;
+    font-size: large;
+  }
+  .buttons {
+    margin-bottom: 0rem;
+  }
+  .social-media {
+    margin-top: 0rem;
+  }
+  .image img {
+    display: none;
+  }
+  .portfolio button,
+  .contact-me button {
+    border: none;
+    font-size: 2rem;
+    height: 2.9rem;
+    width: 12rem;
+    border: 2.5px solid #00F8E0;
+  }
+}

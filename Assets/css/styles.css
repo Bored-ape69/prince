@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Poppins:wght@300&family=Roboto:wght@300&family=Syne+Tactile&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+#video-bg {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: fixed;
+  z-index: -1;
+}
+
+.welcome {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 14rem;
+}
+.hello,
+.name,
+.profession {
+  font-family: poppins;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.hello {
+  font-size: 4.5rem;
+  background: -webkit-linear-gradient(
+    rgb(228, 54, 83),
+    rgb(37, 37, 216),
+    rgb(52, 241, 4)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 1rem;
+}
+.name,
+.profession {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.profession {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.btn {
+  text-align: center;
+}
+.btn button {
+  margin-top: 5rem;
+  height: 3.2rem;
+  width: 15rem;
+  font-family: poppins;
+  border-radius: 25px;
+  font-weight: 900;
+  font-size: larger;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  z-index: 1;
+}
+.btn button:hover {
+  width: 14rem;
+  transition: 0.5s;
+  color: purple;
+}
+
+/* Responsive */
+
+@media (min-aspect-ratio: 16/9) {
+  .hero-bg {
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .hero-bg {
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media (max-width: 480px) {
+  .name,
+  .profession {
+    font-size: medium;
+  }
+  .profession {
+    font-size: large;
+    margin-left: 5rem;
+  }
+  .buttons {
+    margin-bottom: 0rem;
+  }
+  .social-media {
+    margin-top: 0rem;
+  }
+}
